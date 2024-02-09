@@ -26,6 +26,7 @@ body {
    font-family: 'Libre Franklin', sans-serif;
    font-family: 'Nunito Sans', sans-serif;
    font-family: 'Work Sans', sans-serif;
+   overflow: hidden;
 }
 
 .container {
@@ -76,6 +77,8 @@ header {
    height: 100vh;
    color: white;
    background-image: url(../images/wallpaperflare.com_wallpaper.jpg);
+   background-position-x: center;
+   background-size: cover;
 }
 
 header .top-section {
@@ -195,21 +198,9 @@ header .top-section .intro nav .bars .main-bar .sub-bars li:hover {
 
 /* Extra Small Devices */
 
-@media (max-width: 767px) {
-   header {
-      background-size: contain;
-      background-repeat: no-repeat;
-   }
-}
-
 @media (min-width: 768px) {
    header .top-section .intro {
       width: 760px;
-   }
-
-   header {
-      background-size: contain;
-      background-repeat: no-repeat;
    }
 }
 
@@ -219,11 +210,6 @@ header .top-section .intro nav .bars .main-bar .sub-bars li:hover {
    header .top-section .intro {
       width: 985px;
    }
-
-   header {
-      background-size: contain;
-      background-repeat: no-repeat;
-   }
 }
 
 /* Large Devices */
@@ -231,10 +217,6 @@ header .top-section .intro nav .bars .main-bar .sub-bars li:hover {
 @media (min-width: 1200px) {
    header .top-section .intro {
       width: 1200px;
-   }
-
-   header {
-      background-size: cover;
    }
 }
 
@@ -244,13 +226,23 @@ header .top-section .intro nav .bars .main-bar .sub-bars li:hover {
 
 header .container {
    display: flex;
-   justify-content: flex-end;
    align-items: center;
    height: calc(100vh - 74.5px);
 }
 
-header .container .main-section {
-   text-align: right;
+header .container .main-section p {
+   font-size: 40px;
+   transform: translate(-500px);
+   animation-name: animation;
+   animation-duration: 3s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+   100% {
+      transform: translateX(1500px);
+   }
 }
 
 /* End Main Section */
