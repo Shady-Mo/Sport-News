@@ -1,0 +1,258 @@
+/* Start Variables */
+
+:root {
+   --header-color: #252a2d;
+   --section-color: #f6f4ff;
+   --lines-color: #3c4245;
+   --duration: 0.3s;
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   font-family: 'Hedvig Letters Sans', sans-serif;
+   font-family: 'Inter', sans-serif;
+   font-family: 'Lato', sans-serif;
+   font-family: 'Libre Franklin', sans-serif;
+   font-family: 'Nunito Sans', sans-serif;
+   font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+/* Extra Small Devices */
+
+@media (min-width: 768px) {
+   .container {
+      width: 760px;
+   }
+}
+
+/* Small Devices */
+
+@media (min-width: 992px) {
+   .container {
+      width: 985px;
+   }
+}
+
+/* Large Devices */
+
+@media (min-width: 1200px) {
+   .container {
+      width: 1200px;
+   }
+}
+
+/* End Global Rules */
+
+/* Start Header */
+
+/* Start Top Section */
+
+header {
+   background-color: var(--header-color);
+   height: 100vh;
+   color: white;
+   background-image: url(../images/wallpaperflare.com_wallpaper.jpg);
+}
+
+header .top-section {
+   background-color: var(--header-color);
+}
+
+header .top-section .intro {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   margin: 0 auto;
+}
+
+header .top-section .intro .headline {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+header .top-section .intro .headline i {
+   font-size: 30px;
+   color: white;
+}
+
+header .top-section .intro .headline h3 {
+   font-size: 30px;
+   word-spacing: -1px;
+   letter-spacing: -1px;
+   color: white;
+   font-style: italic;
+}
+
+header .top-section .intro nav .bars {
+   display: flex;
+   flex-direction: row-reverse;
+   gap: 47px;
+   position: relative;
+}
+
+header .top-section .intro nav .bars .main-bar:not(:first-child):before {
+   content: "";
+   top: 4px;
+   left: -17px;
+   position: absolute;
+   border-width: 7px;
+   border-style: solid;
+   border-color: transparent transparent transparent white;
+}
+
+header .top-section .intro nav .bars .main-bar {
+   position: relative;
+   transition-duration: var(--duration);
+   font-size: 17px;
+}
+
+header .top-section .intro nav .bars .main-bar .sub-bars {
+   position: absolute;
+   background-color: var(--header-color);
+   color: black;
+   top: 42px;
+   right: 0;
+   margin-top: 5px;
+   width: 170px;
+   display: none;
+}
+
+header .top-section .intro nav .bars .main-bar .sub-bars::before {
+   content: "";
+   background-color: var(--header-color);
+   top: -30px;
+   right: 0;
+   position: absolute;
+   width: 100%;
+   height: 30px;
+   display: none;
+}
+
+header .top-section .intro nav .bars .main-bar .sub-bars li {
+   padding: 15px;
+   transition-duration: var(--duration);
+}
+
+header .top-section .intro nav .bars .main-bar .sub-bars li a {
+   color: white;
+}
+
+header .top-section .intro nav .bars .main-bar .sub-bars li {
+   margin-bottom: 5px;
+   padding: 15px;
+   border-top: solid 1px var(--lines-color);
+}
+
+header .top-section .intro nav .bars .main-bar:hover {
+   cursor: pointer;
+   color: #5558bf;
+}
+
+header .top-section .intro nav .bars .main-bar:hover .sub-bars {
+   cursor: pointer;
+   color: #5558bf;
+   display: block;
+}
+
+header .top-section .intro nav .bars .main-bar:hover::before {
+   border-color: white transparent transparent transparent;
+   top: 5px;
+}
+
+header .top-section .intro nav .bars .main-bar:hover .sub-bars::before {
+   display: block;
+}
+
+header .top-section .intro nav .bars .main-bar .sub-bars li:hover {
+   padding-left: 25px;
+}
+
+/* Extra Small Devices */
+
+@media (max-width: 767px) {
+   header {
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+}
+
+@media (min-width: 768px) {
+   header .top-section .intro {
+      width: 760px;
+   }
+
+   header {
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+}
+
+/* Small Devices */
+
+@media (min-width: 992px) {
+   header .top-section .intro {
+      width: 985px;
+   }
+
+   header {
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+}
+
+/* Large Devices */
+
+@media (min-width: 1200px) {
+   header .top-section .intro {
+      width: 1200px;
+   }
+
+   header {
+      background-size: cover;
+   }
+}
+
+/* End Top Section */
+
+/* Start Main Section */
+
+header .container {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   height: calc(100vh - 74.5px);
+}
+
+header .container .main-section {
+   text-align: right;
+}
+
+/* End Main Section */
+
+/* End Header */
