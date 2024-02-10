@@ -512,6 +512,10 @@ main section .container .transfer-news .col .row .clubs .icon div::after {
    main section .container .transfer-news .col .row .clubs h5 {
       font-size: 14px;
    }
+
+   main section .container .transfer-news .col .row .clubs .icon .long {
+      font-size: 12px;
+   }
 }
 
 @media (max-width: 600px) {
