@@ -5,12 +5,15 @@
    --section-color: #f6f4ff;
    --line-color: #3c4245;
    --best-blue: #03a9f4;
+   --best-blue-edit: #06405d;
    --best-red: #e91e63;
+   --best-red-edit: #bb013f;
    --dark-blue: #051d60;
    --dark-purple: #6c28e6;
    --padding-nav: 15px;
    --padding-top: 30px;
    --padding-bottom: 40px;
+   --gap: 50px;
    --duration: 0.3s;
 }
 
@@ -259,6 +262,17 @@ header .top-section .intro .links nav .bars .main-bar .sub-bars li:hover {
       display: none;
    }
 
+   header .top-section .intro .links nav .bars::before {
+      content: "";
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      top: -20px;
+      left: 0px;
+      background-color: var(--header-color);
+      border-width: 0;
+   }
+
    header .top-section .intro .links nav .bars .main-bar {
       padding: var(--padding-nav);
       position: relative;
@@ -281,6 +295,14 @@ header .top-section .intro .links nav .bars .main-bar .sub-bars li:hover {
       border-color: transparent transparent transparent white;
    }
 
+   header .top-section .intro .links:hover {
+      cursor: pointer;
+   }
+
+   header .top-section .intro .links:hover nav .bars {
+      display: block;
+   }
+
    header .top-section .intro .links nav .bars .main-bar:hover .sub-bars::before {
       display: none;
    }
@@ -293,10 +315,6 @@ header .top-section .intro .links nav .bars .main-bar .sub-bars li:hover {
    header .top-section .intro .links nav .bars .main-bar:hover .sub-bars {
       right: 167px;
       top: -6px;
-   }
-
-   header .top-section .intro .links:hover nav .bars {
-      display: block;
    }
 }
 
@@ -342,7 +360,7 @@ main section .container .special-heading h2 {
    letter-spacing: -2px;
 }
 
-main section .container .special-heading .line {
+main section.spotlight .container .special-heading .line {
    width: 165px;
    height: 2px;
    margin-top: 10px;
@@ -353,7 +371,7 @@ main section .container .top-news {
    margin-top: var(--padding-top);
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-   gap: 50px;
+   gap: var(--gap);
    text-align: center;
    padding-bottom: var(--padding-bottom);
 }
@@ -373,7 +391,7 @@ main section .container .top-news .news img {
 
 main section .container .top-news .news p {
    padding: 20px;
-   line-height: 1.6;
+   line-height: 1.8;
    color: white;
 }
 
@@ -392,7 +410,137 @@ main section .container .top-news .news p {
    }
 }
 
-
 /* End Spotlight section */
+
+/* Start Transfers Section */
+
+main section.transfers {
+   padding-top: var(--padding-top);
+}
+
+main section.transfers .container .special-heading .line {
+   width: 170px;
+   height: 2px;
+   margin-top: 10px;
+   background-color: var(--line-color);
+}
+
+main section .container .transfer-news {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+   gap: var(--gap);
+   margin-top: var(--padding-top);
+}
+
+main section .container .transfer-news .col {
+   background-color: red;
+}
+
+main section .container .transfer-news .col .definition {
+   font-size: 30px;
+   background-color: var(--dark-blue);
+   color: white;
+   padding: 20px;
+   text-transform: uppercase;
+}
+
+main section .container .transfer-news .col .row {
+   padding: 15px 15px;
+   display: grid;
+   grid-template-columns: 40% 60%;
+}
+
+main section .container .transfer-news .col .odd {
+   background-color: #EEE;
+}
+
+main section .container .transfer-news .col .even {
+   background-color: var(--section-color);
+}
+
+main section .container .transfer-news .col .row .profile {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+main section .container .transfer-news .col .row .profile img {
+   width: 55px;
+   height: 60px;
+   margin-left: 15px;
+}
+
+main section .container .transfer-news .col .row .clubs {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+main section .container .transfer-news .col .row .clubs .icon {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   gap: 10px;
+   width: none;
+}
+
+main section .container .transfer-news .col .row .clubs .icon div {
+   height: 3.5px;
+   background-color: black;
+   width: 120px;
+   position: relative;
+}
+
+main section .container .transfer-news .col .row .clubs .icon div::after {
+   content: "";
+   position: absolute;
+   right: -15px;
+   top: -8px;
+   border-width: 10px;
+   border-style: solid;
+   border-color: transparent transparent transparent black;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+   main section .container .transfer-news .col .row .clubs img {
+      width: 50px;
+      height: 50px;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+   main section .container .transfer-news .col .row .clubs h5 {
+      font-size: 14px;
+   }
+}
+
+@media (max-width: 600px) {
+   main section .container .transfer-news .col .definition {
+      font-size: 20px;
+   }
+   
+   main section .container .transfer-news .col .row .clubs img {
+      width: 35px;
+      height: 35px;
+   }
+
+   main section .container .transfer-news .col .row .profile img {
+      width: 35px;
+      height: 40px;
+   }
+
+   main section .container .transfer-news .col .row .clubs .icon div {
+      height: 2px;
+      width: 110px;
+   }
+
+   main section .container .transfer-news .col .row .clubs .icon div::after {
+      right: -9px;
+      top: -4px;
+      border-width: 5px;
+   }
+}
+
+/* End Transfers Section */
 
 /* End Main Section */
