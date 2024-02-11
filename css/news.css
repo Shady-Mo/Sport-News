@@ -19,89 +19,6 @@
 
 /* End Variables */
 
-/* Start Global Rules */
-
-html {
-   scroll-behavior: smooth;
-}
-
-* {
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   padding: 0;
-   margin: 0;
-}
-
-body {
-   font-family: 'Hedvig Letters Sans', sans-serif;
-   font-family: 'Inter', sans-serif;
-   font-family: 'Lato', sans-serif;
-   font-family: 'Libre Franklin', sans-serif;
-   font-family: 'Nunito Sans', sans-serif;
-   font-family: 'Work Sans', sans-serif;
-}
-
-.container {
-   margin: 0 auto;
-   padding: 0 15px;
-}
-
-li {
-   list-style: none;
-}
-
-a {
-   text-decoration: none;
-}
-
-footer .return .icon {
-   width: 40px;
-   height: 40px;
-   border-radius: 50%;
-   background-color: var(--header-color);
-   position: fixed;
-   right: 20px;
-   bottom: 20px;
-}
-
-footer .return .icon::before {
-   content: "";
-   position: absolute;
-   left: 50%;
-   top: 35%;
-   transform: translate(-50%, -50%);
-   border-width: 10px;
-   border-style: solid;
-   border-color: transparent transparent var(--section-color) transparent;
-}
-
-/* Small Devices */
-
-@media (min-width: 768px) {
-   .container {
-      width: 760px;
-   }
-}
-
-/* Medium Devices */
-
-@media (min-width: 992px) {
-   .container {
-      width: 985px;
-   }
-}
-
-/* Large Devices */
-
-@media (min-width: 1200px) {
-   .container {
-      width: 1200px;
-   }
-}
-
-/* End Global Rules */
-
 /* Start Header */
 
 /* Start Top Section */
@@ -351,13 +268,7 @@ header .top-section .intro .links nav .bars .main-bar .sub-bars li:hover {
 /* Start Spotlight section */
 
 main section.spotlight {
-   padding-top: var(--padding-top);
    background-color: var(--section-color);
-}
-
-main section .container .special-heading h2 {
-   font-size: 40px;
-   letter-spacing: -2px;
 }
 
 main section.spotlight .container .special-heading .line {
@@ -414,10 +325,6 @@ main section .container .top-news .news p {
 
 /* Start Transfers Section */
 
-main section.transfers {
-   padding-top: var(--padding-top);
-}
-
 main section.transfers .container .special-heading .line {
    width: 170px;
    height: 2px;
@@ -430,10 +337,7 @@ main section .container .transfer-news {
    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
    gap: var(--gap);
    margin-top: var(--padding-top);
-}
-
-main section .container .transfer-news .col {
-   background-color: red;
+   padding-bottom: 40px;
 }
 
 main section .container .transfer-news .col .definition {
@@ -550,5 +454,219 @@ main section .container .transfer-news .col .row .clubs .icon div::after {
 }
 
 /* End Transfers Section */
+
+/* Start Statistics Section */
+
+main section.statistics {
+   background-color: var(--section-color);
+}
+
+main section.statistics .container .special-heading .line {
+   width: 170px;
+   height: 2px;
+   margin-top: 10px;
+   background-color: var(--line-color);
+}
+
+main section .container .statistics-news {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   padding-top: var(--padding-top);
+   gap: 20px;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   padding-bottom: var(--padding-bottom);
+}
+
+main section .container .statistics-news .col .definition {
+   font-size: 18px;
+   background-color: var(--dark-blue);
+   color: white;
+   padding: 10px;
+   text-transform: uppercase;
+}
+
+main section .container .statistics-news .col .row {
+   padding: 10px 10px;
+   display: grid;
+   grid-template-columns: 50% 50%;
+}
+
+main section .container .statistics-news .col .odd {
+   background-color: #EEE;
+}
+
+main section .container .statistics-news .col .even {
+   background-color: white;
+}
+
+main section .container .statistics-news .col .row .profile {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+main section .container .statistics-news .col .row .profile img {
+   width: 40px;
+   height: 50px;
+}
+
+main section .container .statistics-news .col .row .profile .text {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+main section .container .statistics-news .col .row .profile .text h4 {
+   font-size: 17px;
+}
+
+main section .container .statistics-news .col .row .profile .text h5 {
+   font-size: 12px;
+   font-weight: 500;
+}
+
+main section .container .statistics-news .col .row .club-date {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+main section .container .statistics-news .col .row .club-date img {
+   width: 40px;
+   height: 40px;
+}
+
+main section .container .statistics-news .col .row .data {
+   display: flex;
+   justify-content: space-between;
+   width: 200%;
+   padding: 2.64px;
+}
+
+main section .container .statistics-news .col .row .data .text p {
+   font-weight: 600;
+}
+
+@media (max-width: 1199px) {
+   main section .container .statistics-news .col .definition {
+      font-size: 15px;
+   }
+
+   main section .container .statistics-news .col .row .profile .text h4 {
+      font-size: 13px;
+   }
+
+   main section .container .statistics-news .col .row .profile .text h5 {
+      font-size: 9px;
+   }
+
+   main section .container .statistics-news .col .row .profile img {
+      width: 30px;
+      height: 40px;
+   }
+
+   main section .container .statistics-news .col .row .club-date img {
+      width: 30px;
+      height: 30px;
+   }
+
+   main section .container .statistics-news .col .row .club-date h3 {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 991px) {
+   main section .container .statistics-news .col .definition {
+      font-size: 20px;
+   }
+
+   main section .container .statistics-news .col .row .profile .text h4 {
+      font-size: 15px;
+   }
+
+   main section .container .statistics-news .col .row .profile .text h5 {
+      font-size: 10px;
+   }
+
+   main section .container .statistics-news .col .row .profile img {
+      width: 40px;
+      height: 50px;
+   }
+
+   main section .container .statistics-news .col .row .club-date img {
+      width: 40px;
+      height: 40px;
+   }
+
+   main section .container .statistics-news .col .row .club-date h3 {
+      font-size: 1.17em;
+   }
+}
+
+@media (max-width: 767px) {
+   main section .container .statistics-news .col .definition {
+      font-size: 15px;
+   }
+
+   main section .container .statistics-news .col .row .profile .text h4 {
+      font-size: 13px;
+   }
+
+   main section .container .statistics-news .col .row .profile .text h5 {
+      font-size: 9px;
+   }
+
+   main section .container .statistics-news .col .row .profile img {
+      width: 30px;
+      height: 40px;
+   }
+
+   main section .container .statistics-news .col .row .club-date img {
+      width: 30px;
+      height: 30px;
+   }
+
+   main section .container .statistics-news .col .row .club-date h3 {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 600px) {
+   main section .container .statistics-news .col .definition {
+      font-size: 16px;
+   }
+
+   main section .container .statistics-news .col .row .profile .text h4 {
+      font-size: 15px;
+   }
+
+   main section .container .statistics-news .col .row .profile .text h5 {
+      font-size: 10px;
+   }
+
+   main section .container .statistics-news .col .row .profile img {
+      width: 30px;
+      height: 40px;
+   }
+
+   main section .container .statistics-news .col .row .club-date img {
+      width: 35px;
+      height: 35px;
+   }
+
+   main section .container .statistics-news .col .row .club-date h3 {
+      font-size: 17px;
+   }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+   main section .container .statistics-news .col .row .data {
+      padding: 0;
+   }
+}
+
+/* End Statistics Section */
 
 /* End Main Section */
