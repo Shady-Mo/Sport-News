@@ -104,7 +104,7 @@ header .top-section .intro .links nav .bars .main-bar .sub-bars {
 /* Make Hover More Flexible */
 header .top-section .intro .links nav .bars .main-bar .sub-bars::before {
    content: "";
-   background-color: var(--header-color);
+   background-color: transparent;
    top: -30px;
    right: 0;
    position: absolute;
@@ -670,3 +670,51 @@ main section .container .statistics-news .col .row .data .text p {
 /* End Statistics Section */
 
 /* End Main Section */
+
+/* Start Footer */
+
+footer .about {
+   background-color: var(--header-color);
+   color: white;
+}
+
+footer .about .container .box {
+   display: grid;
+   grid-template-columns: 25% calc(75% - 45px);
+   padding: 20px 25px;
+   gap: 20px;
+   align-items: center;
+}
+
+footer .about .container .box .headline {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 20px;
+   font-style: italic;
+}
+
+footer .about .container .box .text {
+   font-size: 15px;
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 100%;
+   gap: 7px;
+}
+
+footer .about .container .box .text a {
+   color: white;
+}
+
+footer .about .container .box .text a:hover {
+   text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+   footer .about .container .box {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+/* End Footer */
