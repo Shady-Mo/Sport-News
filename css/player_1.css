@@ -303,7 +303,7 @@ main section .profile .background img {
 main section .profile .data {
    display: flex;
    flex-direction: column;
-   gap: 170px;
+   gap: 80px;
    padding-top: 30px;
    /* background-color: red; */
    width: 35%;
@@ -324,19 +324,26 @@ main section .profile .data .name h2 {
 
 main section .profile .data .intro-records ul li {
    margin-bottom: 20px;
-   font-size: 30px;
+   font-size: 20px;
 }
 
 main section .profile .data .intro-records ul li img {
-   width: 35px;
-   height: 35px;
+   width: 30px;
+   height: 30px;
+   position: relative;
+   top: 8px;
 }
 
-main section .profile .data .intro-records ul li img.games,
-main section .profile .data .intro-records ul li img.goals,
-main section .profile .data .intro-records ul li img.assists {
-   position: relative;
-   top: 9px;
+main section .profile .data .intro-records ul li img.left-foot,
+main section .profile .data .intro-records ul li img.right-foot {
+   width: 15px;
+   height: 30px;
+}
+
+main section .profile .data .intro-records ul li img.calender {
+   width: 23px;
+   height: 23px;
+   top: 4px;
 }
 
 @media (max-width: 1200px) {
@@ -350,12 +357,25 @@ main section .profile .data .intro-records ul li img.assists {
    }
 
    main section .profile .data .intro-records ul li {
-      font-size: 25px;
+      font-size: 17px;
    }
 
    main section .profile .data .intro-records ul li img {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
+      top: 6px;
+   }
+
+   main section .profile .data .intro-records ul li img.left-foot,
+   main section .profile .data .intro-records ul li img.right-foot {
+      width: 13px;
+      height: 25px;
+   }
+
+   main section .profile .data .intro-records ul li img.calender {
+      width: 19px;
+      height: 19px;
+      top: 4px;
    }
 }
 
@@ -370,18 +390,26 @@ main section .profile .data .intro-records ul li img.assists {
    }
 
    main section .profile .data .intro-records ul li {
-      font-size: 20px;
+      font-size: 13px;
    }
 
    main section .profile .data .intro-records ul li img {
-      width: 25px;
-      height: 25px;
+      width: 19px;
+      height: 19px;
+      top: 5px;
+   }
+   
+   main section .profile .data .intro-records ul li img.left-foot,
+   main section .profile .data .intro-records ul li img.right-foot {
+      width: 11px;
+      height: 20px;
+      top: 6px;
    }
 
-   main section .profile .data .intro-records ul li img.games,
-   main section .profile .data .intro-records ul li img.goals,
-   main section .profile .data .intro-records ul li img.assists {
-      top: 5px;
+   main section .profile .data .intro-records ul li img.calender {
+      width: 15px;
+      height: 15px;
+      top: 3px;
    }
 }
 
@@ -392,7 +420,7 @@ main section .profile .data .intro-records ul li img.assists {
    }
 
    main section .profile .data {
-      gap: 140px;
+      gap: 20px;
    }
 
    main section .profile .data .name h2 {
@@ -400,12 +428,26 @@ main section .profile .data .intro-records ul li img.assists {
    }
 
    main section .profile .data .intro-records ul li {
-      font-size: 15px;
+      font-size: 10px;
    }
 
    main section .profile .data .intro-records ul li img {
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
+      top: 4px;
+   }
+
+   main section .profile .data .intro-records ul li img.left-foot,
+   main section .profile .data .intro-records ul li img.right-foot {
+      width: 9px;
+      height: 17px;
+      top: 5px;
+   }
+
+   main section .profile .data .intro-records ul li img.calender {
+      width: 13px;
+      height: 13px;
+      top: 2px;
    }
 }
 
@@ -436,18 +478,26 @@ main section .profile .data .intro-records ul li img.assists {
    }
 
    main section .profile .data .intro-records ul li {
-      font-size: 20px;
+      font-size: 17px;
    }
 
    main section .profile .data .intro-records ul li img {
       width: 23px;
       height: 23px;
+      top: 6px;
    }
 
-   main section .profile .data .intro-records ul li img.games,
-   main section .profile .data .intro-records ul li img.goals,
-   main section .profile .data .intro-records ul li img.assists {
-      top: 5px;
+   main section .profile .data .intro-records ul li img.left-foot,
+   main section .profile .data .intro-records ul li img.right-foot {
+      width: 16px;
+      height: 30px;
+      top: 8px;
+   }
+
+   main section .profile .data .intro-records ul li img.calender {
+      width: 23px;
+      height: 23px;
+      top: 4px;
    }
 }
 
