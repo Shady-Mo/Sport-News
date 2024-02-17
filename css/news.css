@@ -702,10 +702,6 @@ footer .about .container .box .text {
    gap: 7px;
 }
 
-footer .about .container .box .text a {
-   color: white;
-}
-
 footer .about .container .box .text a:hover {
    text-decoration: underline;
 }
