@@ -38,6 +38,9 @@ a {
 main section .container .special-heading h2 {
    font-size: 40px;
    letter-spacing: -2px;
+   border-bottom: 2px solid black;
+   padding-bottom: 5px;
+   width: fit-content;
 }
 
 main section {

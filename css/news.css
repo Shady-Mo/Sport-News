@@ -263,19 +263,12 @@ header .top-section .intro .links nav .bars .main-bar .sub-bars li:hover {
 
 /* End Header */
 
-/* Start Main Section */
+/* Start Main */
 
 /* Start Spotlight section */
 
 main section.spotlight {
    background-color: var(--section-color);
-}
-
-main section.spotlight .container .special-heading .line {
-   width: 165px;
-   height: 2px;
-   margin-top: 10px;
-   background-color: var(--line-color);
 }
 
 main section .container .top-news {
@@ -316,21 +309,13 @@ main section .container .top-news .news p {
 
 @media (min-width: 768px) {
    main section .container .top-news .news:hover {
-      transform: scale(1.1);
-      cursor: pointer;
+      transform: scale(1.06);
    }
 }
 
 /* End Spotlight section */
 
 /* Start Transfers Section */
-
-main section.transfers .container .special-heading .line {
-   width: 170px;
-   height: 2px;
-   margin-top: 10px;
-   background-color: var(--line-color);
-}
 
 main section .container .transfer-news {
    display: grid;
@@ -459,13 +444,6 @@ main section .container .transfer-news .col .row .clubs .icon div::after {
 
 main section.statistics {
    background-color: var(--section-color);
-}
-
-main section.statistics .container .special-heading .line {
-   width: 170px;
-   height: 2px;
-   margin-top: 10px;
-   background-color: var(--line-color);
 }
 
 main section .container .statistics-news {
@@ -669,7 +647,7 @@ main section .container .statistics-news .col .row .data .text p {
 
 /* End Statistics Section */
 
-/* End Main Section */
+/* End Main */
 
 /* Start Footer */
 

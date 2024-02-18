@@ -1,0 +1,424 @@
+/* Start Variables */
+
+:root {
+   --header-color: #252a2d;
+   --section-color: #f6f4ff;
+   --line-color: #3c4245;
+   --best-blue: #03a9f4;
+   --best-blue-edit: #06405d;
+   --best-red: #e91e63;
+   --best-red-edit: #bb013f;
+   --dark-blue: #051d60;
+   --dark-purple: #6c28e6;
+   --padding-nav: 15px;
+   --padding-top: 30px;
+   --padding-bottom: 40px;
+   --gap: 50px;
+   --duration: 0.3s;
+}
+
+/* End Variables */
+
+/* Start Header */
+
+/* Start Top Section */
+
+header {
+   background-color: var(--section-color);
+   /* height: 100vh; */
+   color: white;
+}
+
+header .top-section {
+   position: sticky;
+   width: 100%;
+   z-index: 1;
+   top: 0;
+   background-color: var(--header-color);
+}
+
+header .top-section .intro {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   margin: 0 auto;
+}
+
+header .top-section .intro .headline {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+header .top-section .intro .headline i {
+   font-size: 30px;
+   color: white;
+}
+
+header .top-section .intro .headline h3 {
+   font-size: 30px;
+   word-spacing: -1px;
+   letter-spacing: -1px;
+   color: white;
+   font-style: italic;
+}
+
+header .top-section .intro .links nav .bars {
+   display: flex;
+   flex-direction: row-reverse;
+   gap: 47px;
+   position: relative;
+}
+
+header .top-section .intro .links nav .bars .main-bar::before {
+   content: "";
+   top: 4px;
+   left: -17px;
+   position: absolute;
+   border-width: 7px;
+   border-style: solid;
+   border-color: transparent transparent transparent white;
+}
+
+header .top-section .intro .links nav .bars .main-bar {
+   position: relative;
+   transition-duration: var(--duration);
+   font-size: 17px;
+}
+
+header .top-section .intro .links nav .bars .main-bar .sub-bars {
+   position: absolute;
+   background-color: var(--header-color);
+   color: black;
+   top: 42px;
+   right: 0;
+   margin-top: 5px;
+   width: 170px;
+   display: none;
+}
+
+/* Make Hover More Flexible */
+header .top-section .intro .links nav .bars .main-bar .sub-bars::before {
+   content: "";
+   background-color: transparent;
+   top: -30px;
+   right: 0;
+   position: absolute;
+   width: 100%;
+   height: 30px;
+   display: none;
+}
+
+header .top-section .intro .links nav .bars .main-bar .sub-bars li {
+   transition-duration: var(--duration);
+   margin-bottom: 5px;
+   border-top: solid 1px var(--line-color);
+}
+
+header .top-section .intro .links nav .bars .main-bar .sub-bars li a {
+   padding: var(--padding-nav);
+   color: white;
+   display: block;
+}
+
+header .top-section .intro .links nav .bars .main-bar:hover {
+   cursor: pointer;
+   color: #5558bf;
+}
+
+header .top-section .intro .links nav .bars .main-bar:hover .sub-bars {
+   cursor: pointer;
+   color: #5558bf;
+   display: block;
+}
+
+header .top-section .intro .links nav .bars .main-bar:hover::before {
+   border-color: white transparent transparent transparent;
+   top: 5px;
+}
+
+header .top-section .intro .links nav .bars .main-bar:hover .sub-bars::before {
+   display: block;
+}
+
+header .top-section .intro .links nav .bars .main-bar .sub-bars li:hover {
+   padding-left: 15px;
+}
+
+/* Extra Small Devices */
+
+@media (max-width: 768px) {
+   header .top-section .intro .links .icon {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   header .top-section .intro .links .icon span {
+      background-color: white;
+      height: 2px;
+      width: 40px;
+   }
+
+   header .top-section .intro .links {
+      position: relative;
+   }
+
+   header .top-section .intro .links nav .bars {
+      position: absolute;
+      right: 0;
+      top: 37px;
+      flex-direction: column;
+      background-color: var(--header-color);
+      gap: 0px;
+      margin-top: 10px;
+      display: none;
+   }
+
+   header .top-section .intro .links nav .bars::before {
+      content: "";
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      top: -20px;
+      left: 0px;
+      background-color: var(--header-color);
+      border-width: 0;
+   }
+
+   header .top-section .intro .links nav .bars .main-bar {
+      padding: var(--padding-nav);
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 5px;
+      border-top: solid 1px var(--line-color);
+   }
+
+   header .top-section .intro .links nav .bars .main-bar::before {
+      display: none;
+   }
+
+   header .top-section .intro .links nav .bars .main-bar::after {
+      content: "";
+      top: 19px;
+      left: 10px;
+      position: absolute;
+      border-width: 7px;
+      border-style: solid;
+      border-color: transparent transparent transparent white;
+   }
+
+   header .top-section .intro .links:hover {
+      cursor: pointer;
+   }
+
+   header .top-section .intro .links:hover nav .bars {
+      display: block;
+   }
+
+   header .top-section .intro .links nav .bars .main-bar:hover .sub-bars::before {
+      display: none;
+   }
+
+   header .top-section .intro .links nav .bars .main-bar:hover::after {
+      border-color: transparent white transparent transparent ;
+      left: 0px;
+   }
+
+   header .top-section .intro .links nav .bars .main-bar:hover .sub-bars {
+      right: 167px;
+      top: -6px;
+   }
+}
+
+/* Small Devices */
+
+@media (min-width: 768px) {
+   header .top-section .intro {
+      width: 760px;
+   }
+}
+
+/* Medium Devices */
+
+@media (min-width: 992px) {
+   header .top-section .intro {
+      width: 985px;
+   }
+}
+
+/* Large Devices */
+
+@media (min-width: 1200px) {
+   header .top-section .intro {
+      width: 1200px;
+   }
+}
+
+/* End Top Section */
+
+/* End Header */
+
+/* Start Main */
+
+/* Start Players Section */
+
+main section.players {
+   background-color: var(--section-color);
+   padding-bottom: 40px;
+}
+
+main section .container .top {
+   display: flex;
+   flex-direction: column;
+   margin-top: 30px;
+   gap: 40px;
+}
+
+main section .container .top .common {
+   width: fit-content;
+   position: relative;
+}
+
+main section .container .top .common a img {
+   transition-duration: var(--duration);
+}
+
+main section .container .top .common a img:hover {
+   transform: scale(1.06);
+}
+
+main section .container .top .common .data {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   visibility: hidden;
+   opacity: 0;
+   transition-duration: var(--duration);
+}
+
+main section .container .top .common .data .definition h2 {
+   border-bottom: 2px solid black;
+   width: fit-content;
+   padding-bottom: 4px;
+   font-size: 25px;
+}
+
+main section .container .top .common .data .moment {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+main section .container .top .common .data .moment p:first-of-type {
+   color: #777;
+}
+
+main section .container .top .common .data .moment p:last-of-type {
+   line-height: 1.6;
+}
+
+main section .container .top .common a:has(img:hover) + .data {
+   visibility: visible;
+   opacity: 1;
+}
+
+main section .container .top .player1 .data {
+   right: -850px;
+   top: -50px;
+   width: 500px;
+}
+
+main section .container .top .player1 .moment {
+   width: 75%;
+}
+
+main section .container .top .player2 .data {
+   right: -760px;
+   top: -120px;
+   width: 400px;
+}
+
+main section .container .top .player2 .moment {
+   width: 85%;
+}
+
+main section .container .top .player3 .data {
+   right: -760px;
+   top: -200px;
+   width: 400px;
+}
+
+main section .container .top .player3 .moment {
+   width: 85%;
+}
+
+main section .container .top .player4 .data {
+   right: -760px;
+   top: -370px;
+   width: 400px;
+}
+
+main section .container .top .player4 .moment {
+   width: 85%;
+}
+
+main section .container .top .player5 .data {
+   right: -760px;
+   top: -480px;
+   width: 400px;
+}
+
+main section .container .top .player5 .moment {
+   width: 85%;
+}
+
+/* End Players Section */
+
+/* End Main */
+
+/* Start Footer */
+
+footer .about {
+   background-color: var(--header-color);
+   color: white;
+}
+
+footer .about .container .box {
+   display: grid;
+   grid-template-columns: 25% calc(75% - 45px);
+   padding: 20px 25px;
+   gap: 20px;
+   align-items: center;
+}
+
+footer .about .container .box .headline {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 20px;
+   font-style: italic;
+}
+
+footer .about .container .box .text {
+   font-size: 15px;
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 100%;
+   gap: 7px;
+}
+
+footer .about .container .box .text a:hover {
+   text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+   footer .about .container .box {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+/* End Footer */
