@@ -19,6 +19,30 @@
 
 /* End Variables */
 
+/* Start Body Rules */
+
+body {
+   background-image: url(../images/flag-portugal.jpg);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   position: relative;
+}
+
+body::before {
+   content: "";
+   background-color: black;
+   top: 0;
+   right: 0;
+   position: absolute;
+   width: 100%;
+   height: max(100vh, 100%);
+   opacity: 0.8;
+   z-index: -1;
+}
+
+/* End Body Rules */
+
 /* Start Header */
 
 /* Start Top Section */
@@ -264,26 +288,6 @@ header .top-section .intro .links nav .bars .main-bar .sub-bars li:hover {
 
 /* Start Basic-Info Section */
 
-main section.basic-info {
-   background-image: url(../images/flag-portugal.jpg);
-   background-size: cover;
-   background-position: center;
-   position: relative;
-   z-index: 0;
-}
-
-main section.basic-info::before {
-   content: "";
-   background-color: black;
-   top: 0;
-   right: 0;
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   opacity: 0.8;
-   z-index: -1;
-}
-
 main section .profile {
    display: flex;
    justify-content: space-between;
@@ -500,16 +504,15 @@ main section .profile .data .intro-records ul li img.calender {
 
 main section.records {
    padding-top: 20px;
-   background-color: var(--section-color);
 }
 
 main section .container .box {
-   color: black;
+   color: white;
 }
 
 main section .container .box .headline {
    font-size: 25px;
-   border-bottom: solid 2px black;
+   border-bottom: solid 2px white;
    width: fit-content;
    margin-bottom: 10px;
 }
