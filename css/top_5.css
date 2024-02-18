@@ -411,6 +411,12 @@ main section .container .top .player5 .moment {
    }
 }
 
+@media (max-width: 599px) {
+   main section .container .top .common a img:hover {
+      transform: scale(1.03);
+   }
+}
+
 /* End Players Section */
 
 /* End Main */
