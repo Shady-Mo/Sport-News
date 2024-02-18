@@ -294,9 +294,7 @@ main section .container .top .common .data {
    display: flex;
    flex-direction: column;
    gap: 30px;
-   visibility: hidden;
-   opacity: 0;
-   transition-duration: var(--duration);
+   display: none;
 }
 
 main section .container .top .common .data .definition h2 {
@@ -321,8 +319,7 @@ main section .container .top .common .data .moment p:last-of-type {
 }
 
 main section .container .top .common a:has(img:hover) + .data {
-   visibility: visible;
-   opacity: 1;
+   display: flex;
 }
 
 main section .container .top .player1 .data {
@@ -373,6 +370,45 @@ main section .container .top .player5 .data {
 
 main section .container .top .player5 .moment {
    width: 85%;
+}
+
+@media (max-width: 1199px) {
+   main section .container .top .player1 .data {
+      right: -650px;
+   }
+
+   main section .container .top .player2 .data {
+      right: -575px;
+   }
+   
+   main section .container .top .player3 .data {
+      right: -565px;
+   }
+   
+   main section .container .top .player4 .data {
+      right: -570px;
+   }
+   
+   main section .container .top .player5 .data {
+      right: -575px;
+   }
+}
+
+@media (max-width: 992px) {
+   main section .container .top .common .data {
+      display: none !important;
+   }
+
+   main section.players .container .top {
+      align-items: center;
+   }
+}
+
+@media (max-width: 767px) {
+   main section.players .container .special-heading h2 {
+      text-align: center;
+      margin: 0 auto;
+   }
 }
 
 /* End Players Section */
