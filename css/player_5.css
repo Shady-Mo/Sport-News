@@ -22,7 +22,7 @@
 /* Start Body Rules */
 
 body {
-   background-image: url(../images/flag-portugal.jpg);
+   background-image: url(../images/flag-england.jpg);
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
@@ -297,7 +297,7 @@ main section .profile {
 }
 
 main section .profile .background img {
-   width: 310px;
+   width: 260px;
    height: 620px;
 }
 
@@ -345,7 +345,7 @@ main section .profile .data .intro-records ul li img.calender {
 
 @media (max-width: 1200px) {
    main section .profile .background img {
-      width: 280px;
+      width: 230px;
       height: 570px;
    }
 
@@ -378,7 +378,7 @@ main section .profile .data .intro-records ul li img.calender {
 
 @media (max-width: 992px) {
    main section .profile .background img {
-      width: 250px;
+      width: 210px;
       height: 510px;
    }
 
@@ -412,7 +412,7 @@ main section .profile .data .intro-records ul li img.calender {
 
 @media (max-width: 768px) {
    main section .profile .background img {
-      width: 200px;
+      width: 170px;
       height: 410px;
    }
 
@@ -465,7 +465,7 @@ main section .profile .data .intro-records ul li img.calender {
    }
 
    main section .profile .background img {
-      width: 170px;
+      width: 140px;
       height: 330px;
       margin: 0 auto;
    }
